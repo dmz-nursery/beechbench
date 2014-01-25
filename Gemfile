@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -33,9 +30,15 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'mysql2'
   gem 'rspec-rails'
+ 
+  # debugging tools
   gem 'debugger'
   gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller' # provides live console for better_errors gem
+  gem 'meta_request' # supports RailsPanel Chrome extension 
 end
 
 # Use ActiveModel has_secure_password
